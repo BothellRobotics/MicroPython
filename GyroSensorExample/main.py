@@ -11,7 +11,7 @@ from pybricks.ev3devices import Motor
 
 # Write your program here
 brick.sound.beep()
-gs = GyroSensor(Port.S2)
+gs = GyroSensor(Port.S3)
 motorA = Motor(Port.A)
 motorD = Motor(Port.D)
 robot = DriveBase(motorA, motorD, 56, 114)
@@ -31,13 +31,16 @@ print("Gyro Angle :", gs.angle())
 
 #Run motor A at 30 degrees per second
 motorA.run(300)
+motorD.run(-300)
+
 #wait(5000)
 
-while gs.angle() <= 90:
+while gs.angle() <= 80:
     wait(50)
     
-    if gs.angle() >= 90:
+    if gs.angle() >= 80:
         robot.stop(Stop.BRAKE)
+        
+robot.stop(Stop.BRAKE)
 
 print("Gyro Angle :", gs.angle())
-
