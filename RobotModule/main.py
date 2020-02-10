@@ -5,7 +5,7 @@ from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
 from pybricks.parameters import (Port, Stop, Direction, Button, Color,
                                  SoundFile, ImageFile, Align)
-from pybricks.tools import print, wait, StopWatch
+import time
 from pybricks.robotics import DriveBase
 
 # Write your program here
@@ -23,14 +23,14 @@ robot = DriveBase(left, right, 56, 114)
 robot.drive_time(500, 0, 1000)
 #Stop.COAST - Resistance is low
 robot.stop(stop_type = Stop.COAST)
-wait(1000)
+time.sleep(1)
 
 robot.drive_time(500, 0, 1000)
 #Stop.BRAKE - Resistance is medium
 robot.stop(stop_type = Stop.BRAKE)
-wait(1000)
+time.sleep(1)
 
 robot.drive_time(500, 0, 1000)
 #Stop.HOLD - Resistance is high
 robot.stop(stop_type = Stop.HOLD)
-wait(1000)
+time.sleep(1)
