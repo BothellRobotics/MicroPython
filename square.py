@@ -24,12 +24,12 @@ while x < 4 :
 
     gs.reset_angle(0)
 
-    while gs.angle() <= 75 or gs.angle() >= -75:
+    while gs.angle() >= -75:
         wait(50)
         print("Gyro Angle :", gs.angle())
 
         
-        if gs.angle() >= 75 or gs.angle() <= -75:
+        if gs.angle() <= -75:
             robot.stop(Stop.BRAKE)
             
     robot.stop(Stop.BRAKE)
