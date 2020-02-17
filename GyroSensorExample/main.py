@@ -38,9 +38,6 @@ motorD.run(-300)
 while gs.angle() <= 80:
     wait(50)
     
-    if gs.angle() >= 80:
-        robot.stop(Stop.BRAKE)
-        
 robot.stop(Stop.BRAKE)
 
 print("Gyro Angle :", gs.angle())
