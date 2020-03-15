@@ -33,5 +33,17 @@ def circle(rotations = 1, direction = -1, speedOut = 500, speedIn = 150):
 
     robot.stop(Stop.BRAKE)
 
+    
 circle()
+rotations = 2, direction = 1, speedOut = 700, speedIn = 250
+circle(rotations, direction, speedOut, speedIn)
   
+def add(x = 10, y = 10):
+  z = x + y
+  print("Addition: ", z)
+  
+print("enter number to add")
+a = int(input())
+print("enter another number to add")
+b = int(input())
+add(a, b)
